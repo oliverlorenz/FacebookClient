@@ -1,0 +1,18 @@
+{
+    "name": "oliverlorenz/facebook-client",
+    "require": {
+        "facebook/php-sdk": "dev-master",
+        "jbboehr/facebook-php-cli": "~1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Oliver Lorenz",
+            "email": "mail@oliverlorenz.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "OliverLorenz\\": "src/"
+        }
+    }
+}
