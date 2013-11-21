@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Oliver Lorenz <mail@oliverlorenz.com>
+ */
+
 namespace OliverLorenz\Facebook;
 
 class Credentials 

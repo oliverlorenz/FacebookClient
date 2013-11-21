@@ -1,10 +1,19 @@
 <?php
 
+/**
+ * @author Oliver Lorenz <mail@oliverlorenz.com>
+ */
+
 namespace OliverLorenz\Facebook;
 
 class ClientFactory {
-	
-	static public function get(Credentials $credentials)
+
+    /**
+     * @param Credentials $credentials
+     * @return Client
+     * @throws \Exception
+     */
+    static public function get(Credentials $credentials)
 	{
 		$instance = null;
         $credentialsArray = array(
@@ -24,7 +33,7 @@ class ClientFactory {
 		} else {
 			$instance = new \Facebook($credentialsArray);
 		}
-		return $instance;
+        return new Client($instance);
 	}
 
 	static protected function _getAccessToken(array $credentials) 
