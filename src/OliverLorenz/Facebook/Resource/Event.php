@@ -257,4 +257,11 @@ class Event extends Resource {
         $postFactory->setBasePath('/' . $this->getId());
         return $postFactory;
     }
+
+    public function invite(User $user)
+    {
+        /** @var $event Event */
+        $data = Resource\User\Converter::toArray($user);
+        return $this->getFacebookClientInstance()->api('/' . $this->getId() . '/invited?users=' . $user->getId(), 'post', $data);
+    }
 } 

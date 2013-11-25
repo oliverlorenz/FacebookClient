@@ -13,14 +13,14 @@ class Factory {
     /**
      * @param $type
      * @param $facebookClient
-     * @return null|Event\Factory|Post\Factory
+     * @return null|Event\Handler|Post\Handler
      */
     static public function get($type, $facebookClient) {
         $return = null;
         if('event' == $type) {
-            $return = new Event\Factory($facebookClient);
+            $return = new Event\Handler($facebookClient);
         } else if('post' == $type) {
-            $return = new Post\Factory($facebookClient);
+            $return = new Post\Handler($facebookClient);
         }
         return $return;
     }

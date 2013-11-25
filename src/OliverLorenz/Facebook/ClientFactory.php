@@ -23,13 +23,13 @@ class ClientFactory {
 
         if (PHP_SAPI === 'cli')
 		{
-            $accessToken = $credentials->getAccessToken();
-            if(is_null($accessToken)) {
-                throw new \Exception('for working with the console a access_token is required');
-            }
+            // $accessToken = $credentials->getAccessToken();
+            // if(is_null($accessToken)) {
+            //     throw new \Exception('for working with the console a access_token is required');
+            // }
 
             $instance = new \CliFacebook($credentialsArray);
-            $instance->setAccessToken($accessToken);
+            // $instance->setAccessToken($accessToken);
 		} else {
 			$instance = new \Facebook($credentialsArray);
 		}

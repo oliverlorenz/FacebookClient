@@ -10,7 +10,7 @@ use OliverLorenz\Facebook\Resource\AbstractFactory;
 use OliverLorenz\Facebook\Resource\Event;
 use OliverLorenz\Facebook\Resource\Post;
 
-class Factory extends AbstractFactory {
+class Handler extends AbstractFactory {
 
     /**
      * @param Event $event
